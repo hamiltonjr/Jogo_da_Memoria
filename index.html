@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Jogo da Memória</h1>
+    </header>
+
+    <section>
+        <figure>
+            <img src="genius.png" alt="">
+        </figure>
+    </section>
+    
+    <footer>
+        <a href="jogo.html"><button>Iniciar</button></a>
+    </footer>
+
+    <script>
+        // importe a biblioteca
+        let player = new Retro.Player();
+        let minhaSingelaCancao = JSON.stringify({
+            title : "mi-mi-re-do",
+            tempo : 60,
+            time_signature : "4/4",
+            score : [{
+                instrument : "oscillator-square",
+                volume : 0.5,
+                sheet : [ "E.4", "E.4", "D.4", "C.4", "C.4", "D.4", "E.4", "F.4", "G.4", "G.4", "F.4", "E.4", "E.4", "D.4", "D.4" ]
+            }]
+        });
+
+        player.load(mysong);
+        player.play();
+    </script>
+
+</body>
+</html>
